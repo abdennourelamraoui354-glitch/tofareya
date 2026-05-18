@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>طوفرية | Tofareya Saudi — أصالة الطبخ السعودي</title>
-<meta name="description" content="طوفرية — أصالة الطبخ السعودي وتجربة دفء البيت. الرياض، جدة، العُلا. حفلات خارجية. احجز عبر الواتساب وتعرّف على @tofareya.">
+<meta name="description" content="طوفرية — أصالة الطبخ السعودي وتجربة دفء البيت. الرياض، جدة، العُلا. المنيو الرقمي والطلب المباشر، وحجز عبر الواتساب.">
 <link rel="icon" href="assets/tofareya-logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,6 +205,20 @@ border-block:1px solid rgba(201,168,76,.14);
 box-shadow:inset 0 1px 0 rgba(255,252,246,.04)
 }
 
+.menu-live-row{display:flex;flex-wrap:wrap;flex-direction:column;align-items:center;gap:.55rem;margin-top:1.25rem;margin-bottom:.25rem}
+.menu-live-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.65rem .85rem}
+.menu-live-btn{
+display:inline-flex;align-items:center;justify-content:center;gap:.48rem;font-family:inherit;font-weight:800;font-size:.87rem;
+padding:.78rem 1.42rem;border-radius:999px;cursor:pointer;text-decoration:none;color:#fefcf8!important;
+background:linear-gradient(165deg,rgba(212,177,86,.26),rgba(10,22,46,.55));border:1px solid rgba(212,177,86,.55);
+box-shadow:0 14px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,252,246,.08);transition:transform .28s var(--ease),border-color .28s,box-shadow .28s
+}
+.menu-live-btn:hover{border-color:var(--brand);box-shadow:0 18px 48px rgba(0,0,0,.42);transform:translateY(-2px)}
+.menu-live-btn i{color:var(--brand);font-size:.92rem}
+.menu-live-hint{font-size:.76rem;line-height:1.55;color:rgba(246,239,229,.48);max-width:46ch;text-align:center;margin:0}
+nav.main-nav a.nav-live{color:var(--brand)!important;font-weight:800}
+nav.main-nav a.nav-live:hover{color:#fff!important;border-color:rgba(212,177,86,.55)!important}
+
 .feature-card{
 padding:clamp(1.75rem,4vw,2.5rem);border-radius:var(--rad);border:1px solid rgba(201,168,76,.22);
 background:linear-gradient(165deg,rgba(255,252,246,.06),rgba(10,22,46,.5));box-shadow:0 20px 54px rgba(0,0,0,.35);color:rgba(246,239,229,.9)
@@ -303,6 +317,7 @@ kbd.note{font-family:inherit;display:block;text-align:start;font-size:.8rem;colo
 </a>
 <nav class="main-nav" id="mainNav" aria-label="رئيسية">
 <a href="#menu">المأكولات</a>
+<a href="https://hataba.tryorder.net/menu" class="nav-live" target="_blank" rel="noopener noreferrer">منيو الطلب</a>
 <a href="#experience">التجربة</a>
 <a href="#voices">آراء</a>
 <a href="#visit">الفروع</a>
@@ -322,13 +337,13 @@ kbd.note{font-family:inherit;display:block;text-align:start;font-size:.8rem;colo
 <span class="hero-eyebrow mono-tag">TOFAREYA · تراث وسفرة</span>
 <h1 id="heroTitle" class="font-display hero-title-ar">وليمة تراث بلا حدود</h1>
 <p class="hero-brand-en">Tofareya Saudi Arabia</p>
-<p class="hero-lead">سفرة سعودية بدفء البيت في <strong style="font-weight:800;color:#fff">الرياض وجدة والعُلا</strong> — مشاوي على النار ولمة تجمعكم؛ آخر الصور والفعاليات على‎ <strong style="margin-inline:.15rem;color:var(--brand)">‏@tofareya‏</strong>.</p>
+<p class="hero-lead">سفرة سعودية بدفء البيت في <strong style="font-weight:800;color:#fff">الرياض وجدة والعُلا</strong> — مشاوي على النار ولمة تجمعكم؛ المنيو المحدَّث والأصناف والأسعار عبر <strong style="margin-inline:.15rem;color:var(--brand)">المنيو الرقمي للطلب المباشر</strong>.</p>
 <div class="hero-btns">
 <a class="btn btn-gold" href="#reserve"><i class="fa-brands fa-whatsapp"></i> احجز طاولة</a>
 <a class="btn-outline-light" href="#menu"><i class="fa-solid fa-utensils"></i> اكتشف القائمة</a>
-<a class="btn-outline-light" href="https://www.instagram.com/tofareya/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> منيو رقمي</a>
+<a class="btn-outline-light" href="https://hataba.tryorder.net/menu" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> منيو رقمي · طلب مباشر</a>
 </div>
-<p class="hero-meta-line mono-tag">الرياض · جدة · العُلا · حجز عبر الواتساب</p>
+<p class="hero-meta-line mono-tag">الرياض · جدة · العُلا · منيو رقمي · واتساب</p>
 </div>
 <div class="hero-right" aria-hidden="true">
 <div class="hero-collage">
@@ -363,6 +378,12 @@ kbd.note{font-family:inherit;display:block;text-align:start;font-size:.8rem;colo
 <span class="k">من المطبخ</span>
 <h2 class="font-display">لمسات مختارة من قائمتنا</h2>
 <p>أطباق تعكس روح السفرة السعودية؛ الأسعار إرشادية وتؤكَّد من الفرع وقت الزيارة.</p>
+<div class="menu-live-row">
+<div class="menu-live-actions">
+<a href="https://hataba.tryorder.net/menu" class="menu-live-btn" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-table-list"></i><span>المنيو الرقمي الكامل — طلب مباشر</span></a>
+</div>
+<p class="menu-live-hint">الأسعار والأصناف المحدَّثة على منصّة الطلب؛ المعاينة أدناه للأجواء فقط.</p>
+</div>
 </div>
 <div class="wrap cards">
 <div class="card"><div class="card-media"><span class="card-badge">ولائم ومشاركة</span><img src="assets/img-feast-table.jpg" alt="طاولة ضيافة طويلة بشمعات وحصص عدة وأطباق ومناسبة عشاء" width="7360" height="4912" loading="lazy" decoding="async"></div><div class="card-body"><div><h4>سفرة عشاء ومشاركة<br><small class="en">Gathered Table</small></h4></div><div class="card-price">٢٨٩ ﷼</div><small>لمشاركة العائلة أو الأصدقاء — أطباق متنوعة ومشاريب على طاولة واحدة.</small></div></div>
@@ -436,8 +457,8 @@ kbd.note{font-family:inherit;display:block;text-align:start;font-size:.8rem;colo
 <div class="wrap footer-grid">
 <div>
 <h5>زوروا طوفرية</h5>
-<p>الرياض وجدة والعُلا — لمتابعة العناوين الدقيقة وأوقات كل فرع راجعوا حساب‎ @tofareya‎ على إنستغرام أو تواصلوا عبر الواتساب.</p>
-<div class="social-row" style="margin-top:.75rem"><a href="https://www.instagram.com/tofareya/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram fa-lg"></i></a></div>
+<p>الرياض وجدة والعُلا — للعناوين الدقيقة وأوقات الفروع تواصلوا عبر الواتساب؛ المنيو الكامل والأسعار على المنيو الرقمي.</p>
+<div class="social-row" style="margin-top:.75rem"><a href="https://hataba.tryorder.net/menu" target="_blank" rel="noopener noreferrer" class="menu-live-btn" style="font-size:.82rem;padding:.55rem 1.15rem"><i class="fa-solid fa-table-list"></i><span>فتح المنيو الرقمي</span></a></div>
 </div>
 <div>
 <h5 class="mono-tag">HOURS · أوقات مؤقتة</h5>
@@ -447,7 +468,7 @@ kbd.note{font-family:inherit;display:block;text-align:start;font-size:.8rem;colo
 <tr style="border-bottom:1px solid rgba(246,239,229,.06)"><th style="text-align:inherit;padding:.45rem;font-weight:600;color:#fcf6ec">الجمعة عند بعض الفروع*</th><td style="padding:.45rem;opacity:.9">حسب المنشور*</td></tr>
 </tbody>
 </table>
-<p style="opacity:.55;font-size:.72rem;line-height:1.5;margin-top:.75rem"><span>*</span>الجمعة وبعض المواعيد تختلف بحسب الفرع؛ يُعتمد المنشور الرسمي على إنستغرام قبل الزيارة.</p>
+<p style="opacity:.55;font-size:.72rem;line-height:1.5;margin-top:.75rem"><span>*</span>الجمعة وبعض المواعيد تختلف بحسب الفرع؛ يُعتمد التأكيد مع الفرع أو عبر الواتساب قبل الزيارة.</p>
 </div>
 <div style="direction:ltr;text-align:inherit">
 <h5 class="mono-tag">CONTACT LINES · واتساب</h5>
