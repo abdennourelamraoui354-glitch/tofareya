@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>طوفرية | Tofareya Saudi — أصالة الطبخ السعودي</title>
+<meta name="description" content="طوفرية — أصالة الطبخ السعودي وتجربة دفء البيت. الرياض، جدة، العُلا. حفلات خارجية. احجز عبر الواتساب وتعرّف على @tofareya.">
+<link rel="icon" href="assets/tofareya-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="preload" as="image" href="assets/img-grill.jpg" fetchpriority="high">
+<style>
+:root{
+--sand:#132744;
+--cream:#172d4f;
+--ink:#f5f1ea;
+--ink-soft:rgba(232,225,216,.74);
+--brand:#d4b156;
+--brand-deep:#c9a84c;
+--line:rgba(255,252,246,.12);
+--rad:22px;
+--ease:cubic-bezier(.22,1,.36,1);
+--hero-navy:#0a162e;
+--hero-navy-deep:#060d1c;
+--surface:rgba(255,252,246,.045);
+--surface-strong:rgba(255,252,246,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:clamp(72px,14vw,104px)}
+body{font-family:"Tajawal","Segoe UI",sans-serif;
+background-color:var(--hero-navy-deep);
+background-image:linear-gradient(180deg,var(--hero-navy-deep) 0%,var(--hero-navy) 18%,#162847 52%,var(--hero-navy-deep) 100%);
+background-attachment:fixed;
+color:rgba(246,239,229,.92);line-height:1.72;font-size:clamp(.92rem,1.85vw,1.02rem);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,.font-display{font-family:"El Messiri",serif;font-weight:700}
+a{color:inherit;text-decoration:none}
+.en{direction:ltr;display:inline-block;text-align:left;color:rgba(216,206,190,.62);font-weight:500;letter-spacing:.04em;text-transform:none}
+.mono-tag{font-size:.73rem;font-weight:700;letter-spacing:.18em;color:var(--brand);opacity:.95}
+.wrap{width:min(1180px,100%);margin-inline:auto;padding-inline:clamp(1rem,4vw,1.75rem)}
+
+/* Top capsule */
+.topbar{padding:.55rem clamp(1rem,3vw,1.5rem) 0;text-align:center}
+.topbar-inner{
+margin-inline:auto;max-width:min(980px,100%);padding:.72rem 1.15rem;background:linear-gradient(135deg,#3d2920,#2d1f17);
+border-radius:999px;border:1px solid rgba(201,168,76,.33);font-size:.8rem;line-height:1.55;color:#f8f0e4;
+display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;justify-content:center;box-shadow:0 12px 36px rgba(45,31,23,.35)
+}
+.topbar-inner strong{color:var(--brand)}
+.topbar-inner a{color:var(--brand);border-bottom:1px solid rgba(201,168,76,.38);padding-bottom:.1rem;font-weight:700}
+
+/* Header */
+header{
+position:sticky;top:0;z-index:90;background:rgba(255,254,251,.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line);transition:box-shadow .35s var(--ease)
+}
+header.scrolled{box-shadow:0 10px 40px rgba(45,31,23,.06)}
+header.hdr-on-dark{box-shadow:none}
+
+/* Hero cluster — متصل مع خلفية الصفحة */
+.hero-cluster{background:transparent;color:#fefcf8}
+.hero-cluster .topbar-inner{
+background:rgba(255,252,246,.06)!important;border-color:rgba(201,168,76,.35)!important;color:rgba(246,239,229,.92)!important;
+box-shadow:0 8px 28px rgba(0,0,0,.25)!important
+}
+.hero-cluster .topbar-inner a{color:var(--brand)!important;border-bottom-color:rgba(201,168,76,.45)!important}
+
+header.hdr-on-dark{
+background:transparent!important;border-bottom:1px solid rgba(255,252,246,.08)!important;
+backdrop-filter:none!important;-webkit-backdrop-filter:none!important;transition:background .35s var(--ease),backdrop-filter .35s,border-color .35s,box-shadow .35s
+}
+header.hdr-on-dark.scrolled{
+background:rgba(10,22,46,.94)!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important;
+border-bottom-color:rgba(255,252,246,.06)!important;box-shadow:0 12px 40px rgba(0,0,0,.28)!important
+}
+header.hdr-on-dark .brand-txt{color:#fefcf8!important}
+header.hdr-on-dark .brand-sub{color:rgba(246,239,229,.58)!important}
+header.hdr-on-dark nav.main-nav a{color:rgba(246,239,229,.82)!important}
+header.hdr-on-dark nav.main-nav a:hover{color:#fff!important;border-color:rgba(201,168,76,.55)!important}
+header.hdr-on-dark .burger{border-color:rgba(255,252,246,.22)!important;background:rgba(255,252,246,.06)!important;color:#fefcf8!important}
+header.hdr-on-dark:not(.scrolled) .btn-gold{box-shadow:0 14px 36px rgba(201,168,76,.42)!important}
+
+.btn-outline-light{
+cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.42rem;font-family:inherit;font-weight:700;font-size:.86rem;
+padding:.74rem 1.28rem;border-radius:999px;background:transparent;color:#fefcf8!important;border:2px solid rgba(255,252,246,.38);
+transition:transform .26s var(--ease),border-color .26s,box-shadow .26s,color .26s;font-size:.88rem
+}
+.btn-outline-light:hover{border-color:var(--brand);color:#fff!important;box-shadow:0 10px 32px rgba(0,0,0,.22)}
+.btn-outline-light:active{transform:scale(.982)}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:.85rem;padding:.82rem clamp(1rem,3vw,1.25rem)}
+.brand{display:flex;align-items:center;gap:.7rem;line-height:1.12}
+.brand img{width:52px;height:52px;display:block;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.45);border:2px solid rgba(201,168,76,.42)}
+.brand-txt{font-family:"El Messiri";font-weight:700;font-size:clamp(1.12rem,2.6vw,1.38rem);color:var(--ink)}
+.brand-sub{font-size:.64rem;color:var(--ink-soft);letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+nav.main-nav{display:flex;gap:1.4rem;font-weight:600;font-size:.9rem;color:var(--ink-soft)}
+nav.main-nav a{padding:.35rem 0;border-bottom:2px solid transparent;transition:color .22s,border-color .22s}
+nav.main-nav a:hover{color:var(--ink);border-color:rgba(201,168,76,.42)}
+.hdr-cta{display:flex;gap:.52rem;align-items:center}
+.btn{
+cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.42rem;font-family:inherit;font-weight:700;font-size:.86rem;padding:.74rem 1.35rem;border-radius:999px;border:none;transition:transform .26s var(--ease),box-shadow .26s,background .26s;font-size:.88rem}
+.btn:active{transform:scale(.982)}
+.btn-sand{background:rgba(255,252,246,.08);color:#fefcf8!important;border:1.5px solid rgba(255,252,246,.18);box-shadow:0 6px 22px rgba(0,0,0,.22)}
+.btn-sand:hover{border-color:rgba(201,168,76,.45);box-shadow:0 10px 32px rgba(0,0,0,.28)}
+.btn-gold{background:linear-gradient(148deg,var(--brand) 0%,#9a7229 92%);color:#1a1410;box-shadow:0 14px 32px rgba(154,114,41,.38)}
+.btn-gold:hover{box-shadow:0 18px 40px rgba(154,114,41,.48)}
+.btn-wide{width:100%;max-width:360px;font-size:.98rem;padding:.95rem}
+
+.burger{width:46px;height:46px;display:none;border-radius:14px;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+@media(max-width:880px){nav.main-nav{display:none;width:100%;flex-direction:column;padding:1rem 0;border-top:1px solid var(--line);gap:.85rem;font-size:.95rem}nav.main-nav.open{display:flex!important}header.hdr-on-dark nav.main-nav.open{border-top-color:rgba(255,252,246,.12);background:rgba(10,22,46,.96);border-radius:0 0 18px 18px;padding:1rem .75rem 1.25rem;margin-top:.35rem;border-inline:1px solid rgba(255,252,246,.06)}.burger{display:flex;align-items:center;justify-content:center}}
+@media(max-width:880px){
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;width:100%;padding-inline:clamp(1rem,3vw,1.25rem)}
+.hdr{flex-wrap:wrap;width:100%;padding-inline:0!important}
+#mainNav{flex-basis:100%}
+}
+
+/* Hero — Ocean Basket inspired */
+.hero{margin-top:0;padding-inline:0;width:100%}
+.hero-panel{
+position:relative;border-radius:0 0 min(36px,4vw) min(36px,4vw);overflow:hidden;background:transparent;color:#faf4eb;min-height:auto;display:block
+}
+.hero-panel::before{
+content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+background:
+radial-gradient(ellipse 70% 55% at 85% 18%,rgba(201,168,76,.14),transparent 52%),
+radial-gradient(ellipse 55% 45% at 12% 78%,rgba(99,163,232,.08),transparent 50%),
+linear-gradient(155deg,#0c182f 0%,#132744 35%,#0e1f3d 70%,#0a162e 100%)
+}
+.hero-inner{position:relative;z-index:2;display:grid;gap:clamp(1.35rem,3.5vw,2.75rem);align-items:center;padding-block:clamp(1.35rem,4vw,2.75rem)}
+@media(min-width:960px){.hero-inner{grid-template-columns:1.05fr .95fr;min-height:min(540px,88vh);padding-block:clamp(1.65rem,4vw,3.25rem)}}
+
+.hero-left{padding:0;display:flex;flex-direction:column;justify-content:center;text-align:start}
+.hero-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.2em;color:rgba(246,239,229,.52);margin-bottom:.65rem;display:block;text-transform:uppercase}
+.hero .hero-title-ar{font-size:clamp(2.05rem,5.6vw,3.65rem);line-height:1.12;margin-bottom:.25rem;color:#fff;text-shadow:0 4px 40px rgba(0,0,0,.25)}
+.hero-brand-en{
+font-family:"El Messiri",serif;font-weight:700;font-size:clamp(1rem,2.4vw,1.42rem);color:var(--brand);margin:0 0 .85rem;
+letter-spacing:.06em
+}
+.hero-lead{max-width:48ch;margin:0 0 1.25rem;color:rgba(246,239,229,.82);font-size:clamp(.93rem,1.9vw,1.05rem);line-height:1.72}
+
+.hero-btns{display:flex;flex-wrap:wrap;gap:.55rem .65rem;margin-bottom:.85rem;align-items:center}
+.hero-meta-line{font-size:.72rem;font-weight:700;letter-spacing:.12em;color:rgba(246,239,229,.45);margin-top:.35rem}
+
+.stats-row{display:none}
+
+.hero-right{position:relative;display:none;min-height:min(280px,52vw);overflow:visible}
+@media(min-width:960px){.hero-right{display:block;padding:.35rem 0}}
+
+.hero-collage{position:relative;width:100%;height:100%;min-height:min(340px,52vh)}
+.hero-collage-main,.hero-collage-inset{margin:0}
+.hero-collage-frame{
+position:relative;margin-inline:auto;max-width:420px;padding:clamp(.55rem,.75vw,.72rem);
+border-radius:min(26px,3.5vw);background:rgba(255,252,246,.035);border:1px solid rgba(201,168,76,.28);
+box-shadow:0 32px 80px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,252,246,.06)
+}
+.hero-collage-corner{position:absolute;width:40px;height:40px;pointer-events:none;z-index:6;border-color:var(--brand);border-style:solid;border-width:0;opacity:.92}
+.hero-collage-corner--tl{top:.35rem;right:.35rem;border-top-width:2px;border-inline-end-width:2px;border-start-start-radius:10px}
+.hero-collage-corner--tr{top:.35rem;left:.35rem;border-top-width:2px;border-inline-start-width:2px;border-start-end-radius:10px}
+.hero-collage-corner--bl{bottom:.35rem;right:.35rem;border-bottom-width:2px;border-inline-end-width:2px;border-end-start-radius:10px}
+.hero-collage-corner--br{bottom:.35rem;left:.35rem;border-bottom-width:2px;border-inline-start-width:2px;border-end-end-radius:10px}
+
+.hero-collage-main{
+position:relative;margin:0;border-radius:min(20px,3vw);overflow:hidden;
+aspect-ratio:3/4;max-height:min(520px,68vh);background:#1a1410
+}
+.hero-collage-main img{width:100%;height:100%;object-fit:cover;display:block}
+
+.hero-collage-tag-main{
+position:absolute;top:clamp(.65rem,2vw,1rem);left:50%;transform:translate(-50%,0);z-index:4;
+font-size:.72rem;font-weight:800;color:#1a1410;background:linear-gradient(148deg,var(--brand),#9e7828);
+padding:.42rem .95rem;border-radius:999px;white-space:nowrap;box-shadow:0 10px 28px rgba(0,0,0,.35)
+}
+
+.hero-collage-inset{position:absolute;margin:0;overflow:hidden;border-radius:min(16px,2.5vw);z-index:5;
+border:2px solid rgba(255,252,246,.28);box-shadow:0 22px 48px rgba(0,0,0,.45)}
+.hero-collage-inset img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-collage-inset--tl{
+width:clamp(104px,31%,148px);aspect-ratio:1;top:11%;inset-inline-start:-6%}
+.hero-collage-inset--br{
+width:clamp(118px,34%,168px);aspect-ratio:4/3;bottom:7%;inset-inline-end:-5%}
+.hero-inset-badge{
+position:absolute;bottom:0;left:0;right:0;padding:.35rem .45rem;font-size:.62rem;font-weight:800;
+background:linear-gradient(0deg,rgba(12,18,36,.94),transparent);color:var(--brand);text-align:center;line-height:1.35
+}
+
+@media(max-width:959px){
+.hero-inner{grid-template-columns:1fr;padding-block:clamp(1rem,3vw,1.5rem)}
+.hero-right{display:block!important;grid-row:1;order:-1;max-width:min(400px,100%);margin-inline:auto;width:100%}
+.hero-collage{min-height:min(260px,58vw)}
+.hero-collage-frame{max-width:100%}
+.hero-collage-main{max-height:min(380px,62vw);aspect-ratio:4/5}
+.hero-collage-inset--tl{width:clamp(88px,26%,120px);top:10%;inset-inline-start:-4%}
+.hero-collage-inset--br{width:clamp(98px,29%,132px);bottom:6%;inset-inline-end:-3%}
+}
+
+/* Sections */
+section.sec{padding-block:clamp(2rem,5vw,3.35rem)}
+.sec-head{text-align:center;max-width:720px;margin-inline:auto;margin-bottom:clamp(1.35rem,3vw,2rem)}
+.sec-head .k{font-size:.8rem;font-weight:700;color:var(--brand);letter-spacing:.14em;text-transform:none;margin-bottom:.5rem;display:block}
+.sec-head h2{font-size:clamp(1.62rem,3.9vw,2.35rem);color:#fefcf8;margin-bottom:.55rem;text-shadow:0 2px 24px rgba(0,0,0,.2)}
+.sec-head p{color:rgba(246,239,229,.76)}
+.bg-paper{
+background:linear-gradient(180deg,rgba(19,39,68,.92) 0%,rgba(22,46,79,.65) 50%,rgba(19,39,68,.88) 100%);
+border-block:1px solid rgba(201,168,76,.14);
+box-shadow:inset 0 1px 0 rgba(255,252,246,.04)
+}
+
+.feature-card{
+padding:clamp(1.75rem,4vw,2.5rem);border-radius:var(--rad);border:1px solid rgba(201,168,76,.22);
+background:linear-gradient(165deg,rgba(255,252,246,.06),rgba(10,22,46,.5));box-shadow:0 20px 54px rgba(0,0,0,.35);color:rgba(246,239,229,.9)
+}
+
+/* Dish cards — نفس روح الهيرو */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(274px,1fr));gap:1rem}
+.card{
+border-radius:var(--rad);overflow:hidden;background:var(--surface);border:1px solid rgba(201,168,76,.26);
+box-shadow:0 18px 48px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,252,246,.05);
+backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+transition:transform .42s var(--ease),box-shadow .42s,border-color .42s;opacity:1;transform:none}
+.card:hover{transform:translate3d(0,-6px,0)!important;box-shadow:0 26px 56px rgba(0,0,0,.48);border-color:rgba(201,168,76,.42)}
+.card-media{position:relative;height:auto;min-height:200px;overflow:hidden;background:#0f1d33}
+.card-media img{display:block;width:100%;aspect-ratio:16/11;object-fit:cover;height:auto}
+.card-media::after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(6,13,28,.85));z-index:0}
+.card-badge{position:absolute;top:.65rem;right:.78rem;z-index:1;background:rgba(10,22,46,.88);backdrop-filter:blur(8px);padding:.38rem .7rem;font-size:.7rem;font-weight:700;color:var(--brand);border-radius:999px;border:1px solid rgba(201,168,76,.35)}
+.card-body{padding:1rem 1.05rem 1.12rem;display:flex;flex-wrap:wrap;gap:.45rem .75rem;align-items:flex-start;justify-content:space-between}
+.card-body h4{font-family:"El Messiri";font-size:.98rem;line-height:1.25;color:#fefcf8;flex:1;min-width:58%}
+.card-price{font-family:"El Messiri";font-weight:700;color:var(--brand);font-size:1.08rem;text-shadow:0 1px 12px rgba(0,0,0,.25)}
+.card-body small{display:block;width:100%;font-size:.75rem;color:rgba(246,239,229,.62);line-height:1.45}
+
+.gallery-grid{display:grid;gap:clamp(1rem,2.8vw,1.35rem)}
+@media(min-width:720px){.gallery-grid.cols-6{grid-template-columns:repeat(3,1fr)}}
+.gallery-item{
+aspect-ratio:4/3;border-radius:var(--rad);overflow:hidden;position:relative;background:#0f1d33;
+border:1px solid rgba(201,168,76,.24);opacity:1;transform:none;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.gallery-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+.gallery-cap{position:absolute;inset-inline:0;bottom:0;z-index:1;padding:1.15rem;background:linear-gradient(0deg,rgba(12,8,7,.94),transparent 85%);color:#fcf6ec}
+.gallery-cap span{font-size:.68rem;color:var(--brand);letter-spacing:.1em;display:block;margin-bottom:.25rem}
+.gallery-cap strong{font-family:"El Messiri";font-size:.95rem}
+
+#reserve{scroll-margin-top:clamp(72px,14vw,104px)}
+.res-wrap{
+margin-inline:auto;max-width:640px;text-align:center;
+background:linear-gradient(154deg,#172f52,#0c182f);border-radius:var(--rad);padding:clamp(2rem,5vw,2.95rem);color:#f5ebe1;
+border:1px solid rgba(201,168,76,.38);box-shadow:0 32px 80px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,252,246,.06)
+}
+.res-wrap .sub{font-size:.9rem;color:rgba(245,235,226,.74);margin:.45rem auto 1.75rem;line-height:1.65}
+
+.form-grid{text-align:start;display:grid;grid-template-columns:1fr 1fr;gap:1rem;text-align:inherit}
+@media(max-width:620px){.form-grid{grid-template-columns:1fr}}
+.field-label{font-size:.75rem;display:block;margin-bottom:.35rem;opacity:.88}
+.req{color:#f5c98a;margin-inline:.12rem;font-weight:900;font-size:.7rem}
+.field,.fld-select{
+width:100%;padding:.8rem .95rem;border-radius:13px;background:rgba(255,252,248,.07);border:1px solid rgba(246,239,229,.13);
+font-family:inherit;font-size:.95rem;color:#fcf6ec;margin-top:0
+}
+.field::placeholder{color:rgba(255,250,240,.38)}
+.field:focus,.fld-select:focus{outline:none;border-color:rgba(201,168,76,.53);background:rgba(255,252,248,.09)}
+select.field option,optgroup{color:#1d1512;background:#fcf6ec}
+.fld-span2{grid-column:1/-1}
+
+.voices{display:grid;gap:1rem}
+@media(min-width:760px){.voices.cols-3{grid-template-columns:repeat(3,1fr)}}
+.voice{border-radius:var(--rad);background:var(--surface);padding:1.55rem;border:1px solid rgba(201,168,76,.24);
+backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 14px 40px rgba(0,0,0,.32);opacity:1;transform:none}
+.star{color:var(--brand);margin-bottom:.6rem;font-size:.9rem}
+.quote-txt{display:block;line-height:1.75;color:rgba(246,239,229,.88);font-size:.9rem;margin-bottom:.9rem;font-style:normal}
+.voice-meta{font-weight:700;font-size:.86rem;color:var(--brand)}
+.voice-city{display:block;margin-top:.2rem;font-weight:600;font-size:.78rem;color:rgba(246,239,229,.58)}
+
+.footer-wrap{background:linear-gradient(180deg,#050a14 0%,var(--hero-navy-deep) 100%);color:rgba(246,239,229,.74);margin-top:clamp(1rem,3vw,1.5rem);padding:clamp(2rem,4vw,3rem);border-top:1px solid rgba(201,168,76,.18)}
+.footer-grid{display:grid;gap:1.75rem;text-align:center}
+@media(min-width:820px){.footer-grid{text-align:inherit;grid-template-columns:1fr 1.2fr 1fr}}
+.footer-grid h5{font-family:"El Messiri";color:#fff;margin-bottom:.6rem;font-size:1rem}
+.footer-grid p{font-size:.86rem;line-height:1.7}
+.social-row{display:flex;gap:.85rem;justify-content:center}
+@media(min-width:820px){.social-row{justify-content:flex-start}}
+.social-row a{
+width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:rgba(246,239,229,.06);transition:background .26s,color .26s}
+.social-row a:hover{background:var(--brand);color:#1a1612!important}
+.small-print{margin-top:1.75rem;text-align:center;font-size:.73rem;line-height:1.55;opacity:.58;color:rgba(246,239,229,.85)}
+
+.wa-fixed{
+position:fixed;bottom:1.35rem;left:clamp(.85rem,3vw,1.45rem);z-index:999;width:57px;height:57px;display:flex;border-radius:50%;
+background:linear-gradient(140deg,#25d366,#0f9866);color:#fff;box-shadow:0 14px 34px rgba(15,152,102,.52);justify-content:center;align-items:center;transition:.3s var(--ease)
+}
+.wa-fixed:hover{transform:scale(1.05)}
+kbd.note{font-family:inherit;display:block;text-align:start;font-size:.8rem;color:rgba(245,239,229,.62);margin-top:1rem;line-height:1.62}
+@media(max-width:520px){.wa-fixed{bottom:5rem}}
+</style>
+</head>
+<body id="top">
+
+<div class="hero-cluster">
+<div class="topbar">
+<p class="topbar-inner mono-tag"><span>طوفرية</span><span style="opacity:.35">—</span><span>الرياض · جدة · العُلا</span><span>|</span><span><a href="#reserve">احجز من هنا</a></span></p>
+</div>
+
+<header id="hdr" class="hdr-on-dark">
+<div class="wrap hdr">
+<a href="#top" class="brand">
+<img src="assets/tofareya-logo.svg" width="52" height="52" alt="طوفرية">
+<span><span class="brand-txt">طوفرية</span><span class="brand-sub" style="display:block">TOFAREYA</span></span>
+</a>
+<nav class="main-nav" id="mainNav" aria-label="رئيسية">
+<a href="#menu">المأكولات</a>
+<a href="#experience">التجربة</a>
+<a href="#voices">آراء</a>
+<a href="#visit">الفروع</a>
+<a href="#reserve">احجز</a>
+</nav>
+<div class="hdr-cta">
+<a class="btn btn-gold" href="#reserve"><i class="fa-regular fa-calendar-check"></i> احجز الآن</a>
+<button type="button" class="burger" id="burger" aria-label="القائمة"><i class="fa-solid fa-bars fa-lg"></i></button>
+</div>
+</div>
+</header>
+
+<section class="hero-full hero" aria-labelledby="heroTitle">
+<div class="hero-panel">
+<div class="hero-inner wrap">
+<div class="hero-left">
+<span class="hero-eyebrow mono-tag">TOFAREYA · تراث وسفرة</span>
+<h1 id="heroTitle" class="font-display hero-title-ar">وليمة تراث بلا حدود</h1>
+<p class="hero-brand-en">Tofareya Saudi Arabia</p>
+<p class="hero-lead">سفرة سعودية بدفء البيت في <strong style="font-weight:800;color:#fff">الرياض وجدة والعُلا</strong> — مشاوي على النار ولمة تجمعكم؛ آخر الصور والفعاليات على‎ <strong style="margin-inline:.15rem;color:var(--brand)">‏@tofareya‏</strong>.</p>
+<div class="hero-btns">
+<a class="btn btn-gold" href="#reserve"><i class="fa-brands fa-whatsapp"></i> احجز طاولة</a>
+<a class="btn-outline-light" href="#menu"><i class="fa-solid fa-utensils"></i> اكتشف القائمة</a>
+<a class="btn-outline-light" href="https://www.instagram.com/tofareya/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> منيو رقمي</a>
+</div>
+<p class="hero-meta-line mono-tag">الرياض · جدة · العُلا · حجز عبر الواتساب</p>
+</div>
+<div class="hero-right" aria-hidden="true">
+<div class="hero-collage">
+<div class="hero-collage-frame">
+<span class="hero-collage-corner hero-collage-corner--tl" aria-hidden="true"></span>
+<span class="hero-collage-corner hero-collage-corner--tr" aria-hidden="true"></span>
+<span class="hero-collage-corner hero-collage-corner--bl" aria-hidden="true"></span>
+<span class="hero-collage-corner hero-collage-corner--br" aria-hidden="true"></span>
+<span class="hero-collage-tag-main">ولائم للمشاركة</span>
+<figure class="hero-collage-main">
+<img src="assets/img-grill.jpg" alt="مشاوي على الشبكة والنار" width="3072" height="2304" fetchpriority="high" decoding="async" loading="eager">
+</figure>
+<figure class="hero-collage-inset hero-collage-inset--tl">
+<img src="assets/img-plated.jpg" alt="طبق مميز بتقديم أنيق" width="6000" height="4000" decoding="async" loading="eager">
+<span class="hero-inset-badge">طبق مختار يدوياً</span>
+</figure>
+<figure class="hero-collage-inset hero-collage-inset--br">
+<img src="assets/img-feast-table.jpg" alt="سفرة ولمة على الطاولة" width="7360" height="4912" decoding="async" loading="eager">
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<main>
+
+<section class="sec bg-paper" id="menu">
+<div class="wrap sec-head">
+<span class="k">من المطبخ</span>
+<h2 class="font-display">لمسات مختارة من قائمتنا</h2>
+<p>أطباق تعكس روح السفرة السعودية؛ الأسعار إرشادية وتؤكَّد من الفرع وقت الزيارة.</p>
+</div>
+<div class="wrap cards">
+<div class="card"><div class="card-media"><span class="card-badge">ولائم ومشاركة</span><img src="assets/img-feast-table.jpg" alt="طاولة ضيافة طويلة بشمعات وحصص عدة وأطباق ومناسبة عشاء" width="7360" height="4912" loading="lazy" decoding="async"></div><div class="card-body"><div><h4>سفرة عشاء ومشاركة<br><small class="en">Gathered Table</small></h4></div><div class="card-price">٢٨٩ ﷼</div><small>لمشاركة العائلة أو الأصدقاء — أطباق متنوعة ومشاريب على طاولة واحدة.</small></div></div>
+<div class="card"><div class="card-media"><span class="card-badge">مشاوي ونار</span><img src="assets/img-grill.jpg" alt="سيخ لحم ومشاوي مشوية على شبكة وحريق قوي" width="3072" height="2304" loading="lazy" decoding="async"></div><div class="card-body"><div><h4>مظبي ومشوي<br><small class="en">Grill & Flame</small></h4></div><div class="card-price">١٢٩ ﷼</div><small>لحم مشوي على الفحم بلمسة بهارات ترابية.</small></div></div>
+<div class="card"><div class="card-media"><span class="card-badge">طبق متميز</span><img src="assets/img-plated.jpg" alt="طبق مأكل فاخر بخلفية داكنة وإضاءة مركزة وتغطيات خضروات" width="6000" height="4000" loading="lazy" decoding="async"></div><div class="card-body"><div><h4>طبق مميز وتحضير دقيق<br><small class="en">Chef’s Featured Plate</small></h4></div><div class="card-price">٧٩ ﷼</div><small>طبق يوم بتقديم أنيق للمناسبات أو العشاء الهادئ.</small></div></div>
+<div class="card"><div class="card-media"><span class="card-badge">مطبخ وحيوية</span><img src="assets/img-kitchen.jpg" alt="صالة تحضير وطاولات عمل بنشاط مطبخ قبل التقديم" width="3648" height="5472" loading="lazy" decoding="async"></div><div class="card-body"><div><h4>قدور وحركة مطبخ<br><small class="en">Behind the Line</small></h4></div><div class="card-price">٦٩ ﷼</div><small>أطباق ساخنة من خطّ مطبخ يعمل بنشاط قبل التقديم.</small></div></div>
+<div class="card"><div class="card-media"><span class="card-badge">حلا وتحلية</span><img src="assets/img-dessert.jpg" alt="طبق كيك وحلويات مع شوكة وتقديم مشرق وبشموع الزينة" width="3945" height="2630" loading="lazy" decoding="async"></div><div class="card-body"><div><h4>حلويات وتقطيع<br><small class="en">Sweet Finisher</small></h4></div><div class="card-price">٤٢ ﷼</div><small>ختام السفرة بحلويات مختارة ولمسة دافئة.</small></div></div>
+<div class="card"><div class="card-media"><span class="card-badge">قاعات وحجوزات جماعية</span><img src="assets/img-hall.jpg" alt="صالة مطعم واسعة بإضاءة دافئة وطاولات كثيرة وضيوف" width="5472" height="3648" loading="lazy" decoding="async"></div><div class="card-body"><div><h4>ولائم بصالة موسّعة<br><small class="en">Hall & banquet scale</small></h4></div><div class="card-price" style="font-size:.82rem;line-height:1.35;color:var(--brand-deep);max-width:11ch;text-align:inherit">بحسب الموعد</div><small>مساحات للمجموعات الكبيرة والمناسبات — بالتنسيق مع الفريق.</small></div></div>
+</div>
+<div class="wrap" style="text-align:center;margin-top:2rem;font-size:.82rem;color:var(--ink-soft);opacity:.88">
+<p>قد تختلف الأطباق والأسعار بحسب الفرع والموسم.</p>
+</div>
+</section>
+
+<section class="sec" id="experience">
+<div class="wrap sec-head">
+<span class="k">أجواء طوفرية</span>
+<h2 class="font-display">لمحة من تجربة الضيافة</h2>
+<p>صالة دافئة، مطبخ حيّ، ولقطات من السفرة — تعكس روح اللمة قبل الوصول للفرع.</p>
+</div>
+<div class="wrap gallery-grid cols-6">
+<div class="gallery-item"><img class="gallery-img" src="assets/img-hall.jpg" alt="صالة مطعم بإضاءة دافئة وطاولات كثيرة" width="5472" height="3648" loading="lazy" decoding="async" sizes="(max-width:720px) 100vw, 33vw"><div class="gallery-cap"><span>صالة</span><strong>إضاءة دافئة وجلوس أنيق للضيوف</strong></div></div>
+<div class="gallery-item"><img class="gallery-img" src="assets/img-kitchen.jpg" alt="خط مطبخ مفتوح وطاولات تحضير" width="3648" height="5472" loading="lazy" decoding="async" sizes="(max-width:720px) 100vw, 33vw"><div class="gallery-cap"><span>مطبخ</span><strong>تحضير نشيط قبل الوصول إلى الطاولة</strong></div></div>
+<div class="gallery-item"><img class="gallery-img" src="assets/img-plated.jpg" alt="طبق بتفاصيل دقيقة ومكوّنات ملوّنة بخلفية داكنة" width="6000" height="4000" loading="lazy" decoding="async" sizes="(max-width:720px) 100vw, 33vw"><div class="gallery-cap"><span>طبق</span><strong>تفاصيل مكوّنات ولون يثير الشهية</strong></div></div>
+<div class="gallery-item"><img class="gallery-img" src="assets/img-feast-table.jpg" alt="منضدة عشاء بشمعات وأطباق عدة ومشاريب للمناسبات" width="7360" height="4912" loading="lazy" decoding="async" sizes="(max-width:720px) 100vw, 33vw"><div class="gallery-cap"><span>سفرة</span><strong>وليمة على طاولة واحدة للّمة الكبيرة</strong></div></div>
+<div class="gallery-item"><img class="gallery-img" src="assets/img-grill.jpg" alt="منظر مشاوي وحريق شبكة بارز" width="3072" height="2304" loading="lazy" decoding="async" sizes="(max-width:720px) 100vw, 33vw"><div class="gallery-cap"><span>مشاوي</span><strong>نار وحريق تحت قطع مشوّاة بالكامل</strong></div></div>
+<div class="gallery-item"><img class="gallery-img" src="assets/img-coffee.jpg" alt="إناء قهوة يدوي بتفاصيل لاتيه على الخشب" width="6000" height="4000" loading="lazy" decoding="async" sizes="(max-width:720px) 100vw, 33vw"><div class="gallery-cap"><span>قهوة</span><strong>جلوس هادئ بعد الوجبة</strong></div></div>
+</div>
+</section>
+
+<section class="wrap sec" id="reserve">
+<div class="res-wrap">
+<span class="hero-eyebrow mono-tag" style="color:var(--brand)">RESERVATION</span>
+<h2 class="font-display" style="color:#fefaf4;font-size:clamp(1.55rem,3.9vw,2.2rem);margin:.45rem 0">احجز مساحتكم في تجربة طوفرية</h2>
+<p class="sub">املؤوا البيانات لفتح رسالة واتساب جاهزة يستلمها فريق الحجز.</p>
+<form id="resForm">
+<div class="form-grid">
+<div class="fld-span2"><label class="field-label">الاسم الكامل<span class="req">*</span></label><input class="field" type="text" id="wfName" autocomplete="name" required placeholder="مثلاً محمد العتيبي"></div>
+<div><label class="field-label">رقم الجوال<span class="req">*</span></label><input class="field" type="tel" id="wfPhone" autocomplete="tel" required placeholder="05xxxxxxxx"></div>
+<div><label class="field-label">التاريخ</label><input class="field" type="date" id="wfDate"></div>
+<div><label class="field-label">الوقت المفضل</label>
+<select class="field fld-select" id="wfTime">
+<option value="">حدّدوا الوقت</option><option value="12:00">١٢:٠٠ ظهراً</option><option value="13:30">١:٣٠ مساءً</option><option value="17:30">٥:٣٠ مساءً</option><option value="20:00">٨ مساءً</option><option value="21:30">٩:٣٠ مساءً</option>
+</select>
+</div>
+<div><label class="field-label">عدد الأشخاص</label>
+<select class="field fld-select" id="wfParty">
+<option>٢</option><option>٤</option><option selected>٦</option><option>٨</option><option value="12">١٢ أو أكثر</option>
+</select>
+</div>
+<div class="fld-span2"><label class="field-label">المدينة المرغوبة</label><select class="field fld-select" id="wfCity"><option value="الرياض">الرياض</option><option value="جدة">جدة</option><option value="العُلا">العُلا</option></select></div>
+</div>
+<button type="submit" class="btn btn-gold btn-wide" style="margin-top:1.5rem;background:linear-gradient(135deg,#25d366,#128c68);color:#fff;box-shadow:0 22px 40px rgba(18,136,112,.52)"><i class="fa-brands fa-whatsapp"></i> إرسال عبر الواتساب</button>
+<kbd class="note">خلال وقت الذّروة انتظروا الرد قبل دقيقتين؛ المجموعات الأكثر من ١٢ فردًا تذكرون ذلك في رسالتكم لتنسيق مختلف.</kbd>
+<p class="note" style="margin-top:.5rem;color:rgba(245,239,229,.46)">المظهر: كاجوال راق — الأطفال مرحّب بهم حيث تسمح خدمتهم ذلك.</p>
+<p class="note" style="margin-top:.5rem;color:rgba(245,239,229,.5)">خطّ ثانٍ: <a href="https://wa.me/966559099358" style="color:var(--brand);border-bottom:1px solid rgba(201,168,76,.42)" target="_blank" rel="noopener">٩٦٦ ٥٥٩ ٠٩٩٣٥٨</a></p>
+</form>
+</div>
+</section>
+
+<section class="sec bg-paper" id="voices">
+<div class="wrap sec-head"><span class="k">آراء الضيوف</span><h2 class="font-display">كلمة من تجربتهم معنا</h2><p style="opacity:.88">كلمات ضيوف عن تجربتهم مع طوفرية.</p></div>
+<div class="wrap voices cols-3">
+<div class="voice"><div class="star">★★★★★</div><span class="quote-txt">«من أول دخول لآخر قطعة؛ النار المرئية تجعلك تشمّ المرق قبل أن يبلغ؛ إحساس بيت أكبر يجمعكم».</span><span class="voice-meta">نورة الغامدي</span><span class="voice-city">الرياض</span></div>
+<div class="voice"><div class="star">★★★★★</div><span class="quote-txt">«الأطباق تُعبّئ كأنه عرض أمام الناس كلّها؛ هذا ما احتاجه عميل الشركات لمأدبة صامتة فاخرة».</span><span class="voice-meta">فيصل المطرفي</span><span class="voice-city">جدة</span></div>
+<div class="voice"><div class="star">★★★★★</div><span class="quote-txt">«خط الحفلات الخارجية أتى جاهزاً بالزينة والجلوس؛ الأمور لم تخلنا في يوم الزواج».</span><span class="voice-meta">لين الغامدي</span><span class="voice-city">العُلا</span></div>
+</div>
+</section>
+
+<footer id="visit" class="footer-wrap">
+<div class="wrap footer-grid">
+<div>
+<h5>زوروا طوفرية</h5>
+<p>الرياض وجدة والعُلا — لمتابعة العناوين الدقيقة وأوقات كل فرع راجعوا حساب‎ @tofareya‎ على إنستغرام أو تواصلوا عبر الواتساب.</p>
+<div class="social-row" style="margin-top:.75rem"><a href="https://www.instagram.com/tofareya/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram fa-lg"></i></a></div>
+</div>
+<div>
+<h5 class="mono-tag">HOURS · أوقات مؤقتة</h5>
+<table style="width:100%;border-collapse:collapse;margin-top:.5rem;text-align:inherit;font-size:.86rem;line-height:1.9">
+<tbody>
+<tr style="border-bottom:1px solid rgba(246,239,229,.06)"><th style="text-align:inherit;padding:.45rem;font-weight:600;color:#fcf6ec">سبت ← خميس</th><td style="padding:.45rem;opacity:.9">١٢ ظ ← ٢ ص*</td></tr>
+<tr style="border-bottom:1px solid rgba(246,239,229,.06)"><th style="text-align:inherit;padding:.45rem;font-weight:600;color:#fcf6ec">الجمعة عند بعض الفروع*</th><td style="padding:.45rem;opacity:.9">حسب المنشور*</td></tr>
+</tbody>
+</table>
+<p style="opacity:.55;font-size:.72rem;line-height:1.5;margin-top:.75rem"><span>*</span>الجمعة وبعض المواعيد تختلف بحسب الفرع؛ يُعتمد المنشور الرسمي على إنستغرام قبل الزيارة.</p>
+</div>
+<div style="direction:ltr;text-align:inherit">
+<h5 class="mono-tag">CONTACT LINES · واتساب</h5>
+<p style="margin-top:.65rem;line-height:1.9;color:#fdebd5"><strong><a href="tel:+966559099483" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.52)">+966 559 099 483</a></strong><br><strong><a href="tel:+966559099358" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.52)">+966 559 099 358</a></strong></p>
+<p style="margin-top:.75rem;line-height:1.6">الرياض · جدة · العُلا</p>
+<p style="margin-top:.85rem;line-height:1.55;opacity:.7;font-size:.85rem;color:#fcdfc4">الصور للعرض؛ التقديم الفعلي قد يختلف بحسب الفرع والموسم.</p>
+</div>
+</div>
+<p class="small-print">© طوفرية — جميع الحقوق محفوظة.</p>
+</footer>
+
+<a class="wa-fixed" href="https://wa.me/966559099483" target="_blank" rel="noopener" aria-label="واتساب طوفرية"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+
+<script>
+(function(){
+var h=document.getElementById('hdr');window.addEventListener('scroll',function(){if(h){h.classList.toggle('scrolled',window.scrollY>12)}},{passive:true});
+var burger=document.getElementById('burger');var mn=document.getElementById('mainNav');
+if(burger&&mn){burger.addEventListener('click',function(){mn.classList.toggle('open')});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open')})})}
+
+document.querySelectorAll('a[href="#reserve"]').forEach(function(link){
+link.addEventListener('click',function(ev){
+ev.preventDefault();
+var target=document.getElementById('reserve');
+if(target){
+target.scrollIntoView({behavior:'smooth',block:'start'});
+try{history.replaceState(null,'','#reserve')}catch(_){}
+var mn=document.getElementById('mainNav');if(mn)mn.classList.remove('open');
+setTimeout(function(){var i=document.getElementById('wfName');if(i)try{i.focus({preventScroll:true})}catch(_){i.focus()}},380);
+}
+});
+});
+document.getElementById('resForm').addEventListener('submit',function(ev){
+ev.preventDefault();
+var n=document.getElementById('wfName').value.trim();
+var phone=document.getElementById('wfPhone').value.trim();
+var dt=document.getElementById('wfDate').value;
+var tm=document.getElementById('wfTime').value;
+var cnt=document.getElementById('wfParty').value;
+var city=document.getElementById('wfCity').value;
+var txt='حجز جديد — طوفرية%nالاسم: '+encodeURIComponent(n)+'%nالجوال: '+encodeURIComponent(phone)+'%nالتاريخ: '+encodeURIComponent(dt||'لم يحدد')+' — الوقت: '+encodeURIComponent(tm||'لم يحدد')+' — العدد: '+encodeURIComponent(cnt)+'%nالمدينة: '+encodeURIComponent(city);
+txt=txt.split('%n').join('%0A');
+window.open('https://wa.me/966559099483?text='+txt,'_blank');
+});
+})();
+</script>
+</body>
+</html>
