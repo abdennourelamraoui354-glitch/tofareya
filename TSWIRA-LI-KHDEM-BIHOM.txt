@@ -1,0 +1,18 @@
+الصور والملفات اللي كيخدم بيهم الموقع (index.html)
+كلهم كيخصهم يكونوا فهاد المجلد: assets/
+
+— إلى كان معاك غير هاد الملفات مع index.html، الموقع كيكمل الخدمة محليًا أو على أي استضافة عادية.
+
+tofareya-logo.svg    ← الشعار + الأيقونة favicon
+img-grill.jpg        ← الهيرو، المنيو، المعرض
+img-plated.jpg       ← الهيرو (كولاج)، المنيو، المعرض
+img-feast-table.jpg  ← الهيرو (كولاج)، المنيو، المعرض
+img-kitchen.jpg      ← المنيو، المعرض
+img-dessert.jpg      ← المنيو
+img-hall.jpg         ← المنيو، المعرض
+img-coffee.jpg       ← المعرض
+
+مسار كامل على جهاز المشروع (مثال):
+...empty-window\assets\img-grill.jpg
+
+ما يمكنش إرسال ملفات JPG من هنا؛ انسخ مجلد assets كامل أو ZIP باش تحفظهم.
